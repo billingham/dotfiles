@@ -1,10 +1,16 @@
+# Define a few Color's
+LIGHTGREEN='\e[1;32m'
+LIGHTBLUE='\e[36m'
+NC='\e[0m'              # No Color
+
+
 PATH=$PATH:$HOME/bin:/usr/local/bin:/opt/local/bin
 
 SHELL=/bin/bash
 
 if [ -f ~/.git-completion.bash ]; then
 	source .git-completion.bash
-	export PS1='\e[36m\w$(__git_ps1 "(%s)") \e[0m> '
+	export PS1="${LIGHTBLUE}\w${LIGHTGREEN}"' $(__git_ps1 "(%s)")'"\n\r${NC}#> "
 fi
 
 export EDITOR=mate
@@ -16,7 +22,7 @@ if [ -f ~/.amazon_keys ]; then
    source ~/.amazon_keys
 fi
 
-
+ 
 
 
 alias hist='history | grep $1' #Requires one input
@@ -72,9 +78,7 @@ extract () {
 }
 
 
-# Define a few Color's
-LIGHTGREEN='\e[1;32m'
-NC='\e[0m'              # No Color
+
 
 # WELCOME SCREEN
 #######################################################
