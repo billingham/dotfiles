@@ -13,7 +13,7 @@ if [ -f ~/.git-completion.bash ]; then
 	export PS1="${LIGHTBLUE}\w${LIGHTGREEN}"' $(__git_ps1 "(%s)")'"\n\r${NC}#> "
 fi
 
-export EDITOR=mate
+export EDITOR=/user/bin/mate
 export HISTFILESIZE=10000 # the bash history should save 3000 commands
 export HISTCONTROL=ignoredups #don't put duplicate lines in the history.
 
@@ -45,7 +45,7 @@ alias ls="ls -ila"
 alias gs='git status'
 alias ga='git add'
 alias grm='git rm'
-alias gc='git commit'
+alias gc='git commit -a'
 alias gmv='git mv'
 alias gd='git diff'
 alias git_remove_missing_files="gs | awk '/deleted:(.*)/ {print $3}' | xargs git rm"
