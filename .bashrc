@@ -13,7 +13,7 @@ if [ -f ~/.git-completion.bash ]; then
 	export PS1="${LIGHTBLUE}\w${LIGHTGREEN}"' $(__git_ps1 "(%s)")'"\n\r${NC}#> "
 fi
 
-export EDITOR=/user/bin/mate
+export EDITOR='mate -w'
 export HISTFILESIZE=10000 # the bash history should save 3000 commands
 export HISTCONTROL=ignoredups #don't put duplicate lines in the history.
 
@@ -37,12 +37,9 @@ alias _='cd -'
 alias home='cd ~'
 alias ebrc='mate -w ~/.bashrc'
 
-alias lc=ls
-alias l="ls -l"
-alias ls="ls -ila"
 
 # GIT
-alias gs='git status'
+alias gs='git status -a -v'
 alias ga='git add'
 alias grm='git rm'
 alias gc='git commit -a'
@@ -85,7 +82,6 @@ extract () {
 
 clear;
 date;
-echo -ne "${LIGHTGREEN} HELLO DAVE!${NC} < creepy voice"; 
-echo ""; 
+echo -ne "${LIGHTGREEN}<voice type='creepy'>${LIGHTBLUE}WHAT ARE YOU DOING DAVE?${LIGHTGREEN}</voice>${NC}"; 
 echo "";
 
