@@ -22,33 +22,12 @@ if [ -f ~/.amazon_keys ]; then
    source ~/.amazon_keys
 fi
 
- 
+if [ -f ~/.bash_aliases ]; then
+   source ~/.bash_aliases
+fi
 
 
-alias hist='history | grep $1' #Requires one input
 
-alias ztr='tar -czvf $1 $2' #create a tarball
-alias zls='tar -tzf $1' #ls a tarball
-alist zun='tar -xzvf $1' #extract a tarball
-
-alias ..='cd ..'
-alias ...='cd .. ; cd ..'
-alias _='cd -'
-alias home='cd ~'
-alias ebrc='mate -w ~/.bashrc'
-
-
-# GIT
-alias gs='git status -a -v'
-alias ga='git add'
-alias grm='git rm'
-alias gc='git commit -a'
-alias gmv='git mv'
-alias gd='git diff'
-alias git_remove_missing_files="gs | awk '/deleted:(.*)/ {print $3}' | xargs git rm"
-alias gcm='git commit -m'
-alias gp='git push'
-alias gbr='git checkout -b'
 
 bind "set completion-ignore-case on"
 
